@@ -1,5 +1,4 @@
-# medical-graph-rag-
-Medical Assistant using Graph RAG + Agentic AI powered by Gemini 
+
 # 🏥 Medical Graph RAG + Agentic AI
 
 An AI-powered Medical Assistant built using Graph RAG, Vector Embeddings and Agentic AI.
