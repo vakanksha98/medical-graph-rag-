@@ -1,40 +1,83 @@
+---
+title: MedGraph AI
+emoji: ⚕
+colorFrom: green
+colorTo: purple
+sdk: gradio
+sdk_version: 4.0.0
+python_version: 3.10
+app_file: app.py
+pinned: false
+---
 
-#  Medical Graph RAG + Agentic AI
+# Medical Assistant — Graph RAG + Agentic AI
+### Powered by Google Gemini (FREE!)
 
-An AI-powered Medical Assistant built using Graph RAG, Vector Embeddings and Agentic AI.
+**What this project does:**
+- Builds a **Knowledge Graph** of diseases, symptoms, medicines
+- Uses **Graph RAG** + **Vector Embeddings** for smart search
+- Uses **Agentic Gemini AI** to reason and give structured reports
+- Supports **PDF upload** to expand the knowledge base
 
-##  What it does
-- Takes patient symptoms as input
-- Searches a Medical Knowledge Graph using Graph RAG
-- Uses Vector Embeddings to understand meaning of symptoms
-- Agentic Gemini AI reasons over results and gives structured medical report
+**Tech Stack:** Python · NetworkX · Sentence Transformers · Google Gemini · Gradio
 
-##  Tech Stack
-- **Google Gemini** — Agentic AI reasoning (Free API)
-- **NetworkX** — Medical Knowledge Graph
-- **Sentence Transformers** — Vector Embeddings (Real RAG)
-- **Gradio** — Web Interface
-- **PyPDF2** — PDF ingestion from WHO publications
+---
 
-##  Model Performance
+## Features
+
+- **🔍 Graph RAG Search** - Follow symptom → disease → medicine → side_effect connections
+- **📊 Real Vector Embeddings** - Understands MEANING (finds "waking up to pee" → "Frequent Urination" → "Diabetes")
+- **🤖 Agentic AI** - Gemini autonomously decides when to use keyword vs vector search
+- **📄 PDF Upload** - Add medical PDFs to expand the knowledge graph
+
+## How It Works
+
+```
+Patient Symptoms
+       ↓
+Vector Embedding Search (Sentence Transformers)
+       ↓
+Knowledge Graph Traversal (NetworkX)
+       ↓
+Gemini Agentic Reasoning
+       ↓
+Structured Medical Report
+```
+
+## Model Performance
+
 | Test Type | Accuracy |
-|---|---|
+|-----------|----------|
 | Standard medical terms | 100% |
 | Real world patient language | 20-40% |
 
-## How to Run
-1. Open `medical_graph_rag_FINAL.ipynb` in Google Colab
-2. Get free API key from [aistudio.google.com](https://aistudio.google.com)
-3. Paste key in Cell 2
-4. Run all cells top to bottom
+## Quick Start (Local)
 
-##  Key Concepts
-| Concept | Implementation |
-|---|---|
-| Graph RAG | NetworkX knowledge graph traversal |
-| Vector RAG | Sentence Transformers embeddings |
-| Agentic AI | Gemini tool calling loop |
-| Knowledge Base | WHO medical PDFs |
+### Prerequisites
+
+- Python 3.8+
+- Google Gemini API Key (FREE at https://aistudio.google.com/)
+
+### Installation
+
+```bash
+# Clone repository
+git clone https://github.com/vakanksha98/medical-graph-rag-.git
+cd medical-graph-rag-
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run the app
+python app.py
+```
 
 ## Disclaimer
-This is a research project. Always consult a real doctor for medical advice.
+
+This is a **research project**. Always consult a qualified doctor for medical advice. The AI assistant is not a replacement for professional medical diagnosis.
+
+## Author
+
+**Akanksha Verma**
+- M.Tech – Computer Science and Data Processing
+- IIT Kharagpur
